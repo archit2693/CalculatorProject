@@ -44,7 +44,7 @@ class CommandRunner
 	      p "Good Bye !"
 	      return "exit"
 	    else
-	      p "Sorry, This is an invalid operation."
+	      p "Sorry, This is an invalid operation or missing operand."
 	    end
   	  end
 	end

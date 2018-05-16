@@ -36,4 +36,23 @@ RSpec.describe CommandRunner do
 			expect(command_runner_test.run_command).to eq("exit")
 		end
 	end
+
+	context 'when testing invalid commands' do
+
+	    it "should raise error if command is invalid" do
+	 		command_runner_test.input_command_from_user = "blah"
+			expect(command_runner_test.run_command).to eq("Sorry, This is an invalid operation or missing operand.")
+		end
+
+		it "should raise error if operand is invalid" do
+	 		command_runner_test.input_command_from_user = "add blah"
+			expect(command_runner_test.run_command).to eq("Invalid Operand !")
+		end
+		
+		it "should raise error if operand is valid but operation is invalid" do
+	 		command_runner_test.input_command_from_user = "blah 444"
+			expect(command_runner_test.run_command).to eq("Sorry, This is an invalid operation.")
+		end
+
+	end
 end
