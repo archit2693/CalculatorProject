@@ -1,5 +1,6 @@
 require "bundler/setup"
 require_relative "../lib/calculator/calculator_utility"
+require_relative "../lib/calculator/command_runner"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
