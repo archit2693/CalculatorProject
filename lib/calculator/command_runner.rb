@@ -1,51 +1,27 @@
 require_relative "version"
 require_relative "calculator_utility"
-require_relative "validity_checker"
 
 class CommandRunner
-	@@calculator_utility = CalculatorUtility.new
-	attr_accessor :input_command_from_user
-
-	def run_command
-		split_command_array = input_command_from_user.split(" ")	  
-		if(split_command_array.length == 2)
-	 		command_string = split_command_array[0]
-	 		operand = split_command_array[1]
-	    
-	 		if(operand.is_integer_or_is_float?)     
-	 			operand = operand.to_f     
-				case command_string
-				when "add"
-					p @@calculator_utility.add_input_number_to_fixed_number(operand)
-				when "subtract"
-	       		 	p @@calculator_utility.subtract_input_number_from_fixed_number(operand)
-	      		when "multiply"
-	        		p @@calculator_utility.multiply_fixed_number_with_input_number(operand)
-	      		when "divide"
-	        		if(operand != 0.0)
-	          			p @@calculator_utility.divide_fixed_number_by_input_number(operand)
-	        		else
-	          			p "Division by zero is not allowed"
-	        		end
+	def run_command(command_string, operand, calculator_utility) 
+			case command_string
+			when "add"
+				result = calculator_utility.add_input_number_to_fixed_number(operand)
+			when "subtract"
+	       		result = calculator_utility.subtract_input_number_from_fixed_number(operand)
+	      	when "multiply"
+	        	result =  calculator_utility.multiply_fixed_number_with_input_number(operand)
+	      	when "divide"
+	        	if(operand != 0.0)
+	          		result = calculator_utility.divide_fixed_number_by_input_number(operand)
 	        	else
-	        		p "Sorry, This is an invalid operation."
-	      		end
-	    	else
-	      		p "Invalid Operand !"
-	    	end  
-	    
-	  else
-	    command_string = split_command_array[0]   # When there is no operand
-
-	    case command_string
-	    when "cancel"
-	      p @@calculator_utility.cancel_operations()
-	    when "exit"
-	      p "Good Bye !"
-	      return "exit"
-	    else
-	      p "Sorry, This is an invalid operation or missing operand."
-	    end
-  	  end
+	          		error = "Division by zero is not allowed"
+	        	end
+			when "cancel"
+			    result = calculator_utility.cancel_operations()
+			when "exit"
+			    result = "exit"
+			else
+			    error = "Sorry, This is an invalid operation or missing operand."
+			end 
 	end
 end
