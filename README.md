@@ -16,7 +16,13 @@ Problem statement :
     0
     > exit
     
- Run Solution file calculator.rb by downloading the file and running following command in cmd in the directory same as file
-        ruby calculator.rb
- Input the commands in the cmd to see the output.
+ Steps : 
+ 	1. Clone the repository.
+ 	2. Open cmd and goto calculator directory.
+ 	3. To run -
+ 		a. The code use " ruby /lib/calculator.rb "
+ 		   Input the commands in the cmd to see the output.
+ 		b. The tests " rspec spec spec/calculator_spec.rb "
+
+
 
