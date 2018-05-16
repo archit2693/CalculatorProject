@@ -24,7 +24,7 @@ calculator = Calculator.new
 loop do
 	result = calculator.fetch_and_run_commands(command_parser_object, command_runner_object, calculator_utility)
 	puts result
-	if result == "exit"
+	if result == "Good Bye!"
 		break
 	end
 end

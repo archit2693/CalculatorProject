@@ -34,7 +34,7 @@ class String
     end
 
     def is_a_valid_one_length_operation?
-    	valid_one_length_commands_array = ["cancel", "exit"]
+    	valid_one_length_commands_array = ["cancel", "exit", "abs", "neg", "sqrt", "sqr", "cubert", "cube"]
     	valid_one_length_commands_array.include? self
     end
 end
