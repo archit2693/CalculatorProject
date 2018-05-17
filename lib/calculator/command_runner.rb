@@ -31,9 +31,7 @@ class CommandRunner
 			when "cancel"
 			    result = calculator_utility.cancel_operations()
 			when "exit"
-			    result = "Good Bye!"			
-			else
-			    error = "Sorry, This is an invalid operation or missing operand."
+			    result = "Good Bye!"
 			end 
 	end
 end

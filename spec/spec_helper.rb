@@ -1,5 +1,8 @@
 require "bundler/setup"
+require 'simplecov'
+SimpleCov.start
 require_relative "../lib/calculator/calculator_utility"
+require_relative "../lib/calculator/command_parser"
 require_relative "../lib/calculator/command_runner"
 
 RSpec.configure do |config|
