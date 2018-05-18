@@ -15,14 +15,19 @@ Problem statement :
     > cancel
     0
     > exit
+ 
+Approach towards the Solution :
+
+![alt text](approach.png "Approach towards the solution")
     
- Steps : 
- 	1. Clone the repository.
- 	2. Open cmd and goto calculator directory.
- 	3. To run -
- 		a. The code use " ruby /lib/calculator.rb "
- 		   Input the commands in the cmd to see the output.
- 		b. The tests " rspec spec spec/calculator_spec.rb "
+Steps to run the solution :
+    1. Clone the repository.
+    2. Open cmd and navigate to the cloned repository.
+    3. To run - 
+            a. Program do "ruby /lib/calculator.rb"
+            b. Tests do "rspec spec spec/calculator_spec.rb"
+ 
+
 
 
 

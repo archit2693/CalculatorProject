@@ -4,6 +4,8 @@ SimpleCov.start
 require_relative "../lib/calculator/calculator_utility"
 require_relative "../lib/calculator/command_parser"
 require_relative "../lib/calculator/command_runner"
+require_relative "../lib/calculator/validity_checker"
+
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
